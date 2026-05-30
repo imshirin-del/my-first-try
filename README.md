@@ -1,4 +1,4 @@
-# my-first-try
+cd# my-first-try
 This is my first Git Repository.
 <br>
-Author-Shirin Moza
+Author-Shirin (my-first-try)
