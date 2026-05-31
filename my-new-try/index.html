@@ -1,98 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Introduction</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="page1.html">Education</a>
-        <a href="page2.html">Interests</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="page1.html">Education </a>
+        <a href="page2.html">Hobbies & Interests</a>
     </nav>
 
-    <div class="card">
+    <main>
 
-        <h1>Shirin Moza</h1>
-        <h2>Biotechnology Student</h2>
+        <div class="card">
 
-        <div class="picAndText">
+            <section class="picAndText">
 
-            <img src="image.png" alt="A glimpse of my first year at MIT Manipal">
+                <img src="image.png" alt="Portrait photo of Shirin Moza">
 
-            <div>
+                <div class="text">
 
-                <p>
-                    My name is Shirin Moza. I am from Jammu & Kashmir and currently live in Delhi with my family. My mother tongue is Kashmiri.
-                    I am a first-year Biotechnology student at MIT Manipal and a member of the MBM Wet Lab Subsystem. I am interested in healthcare,
-                    biotechnology, cybersecurity, psychology, and innovation.
-                </p>
+                    <h1>Shirin Moza</h1>
 
-        
+                    <h2>About Me</h2>
 
-            </div>
+                    <p>
+                        My name is Shirin Moza. I currently live in Delhi with my family.
+                        My mother tongue is Kashmiri. I am a Biotechnology student at MIT Manipal and I am a 
+                        recruit of the MBM Wet Lab Subsystem.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section class="picAndText">
+
+                <img src="1yrdown.png" alt="Memories from first year at MIT Manipal">
+
+                <div class="text">
+
+                    <h2>Defining Moments at College</h2>
+
+                    <p>
+                        Que sera, sera—what will be, will be. College is a major reality check. The real defining
+                        moments are often the challenging ones: receiving a disappointing end semester grade or 
+                        overcoming obstacles in group project submissions.
+                    </p>
+
+                    <p>
+                        The campus felt huge and overwhelming at first. Things became easier when I found supportive and
+                        cheerful people around, and became involved in various activities. Those experiences helped me gain confidence
+                        and adapt to college life.
+                    </p>
+
+                </div>
+
+            </section>
 
         </div>
 
-        <h2>My Interests</h2>
-
-        <label for="interest">Select an Area of Interest:</label>
-
-        <select id="interest" onchange="showInfo()">
-            <option value="">-- Choose an Interest --</option>
-            <option value="biotech">Biotechnology</option>
-            <option value="healthcare">Healthcare</option>
-            <option value="cybersecurity">Cybersecurity</option>
-            <option value="psychology">Psychology</option>
-            <option value="innovation">Innovation</option>
-        </select>
-
-        <div id="infoBox" class="info-box">
-            Select an option to learn more about my interests.
-        </div>
-
-    </div>
-
-    <script>
-        function showInfo() {
-
-            let choice = document.getElementById("interest").value;
-            let box = document.getElementById("infoBox");
-
-            if (choice === "biotech") {
-                box.innerHTML =
-                "I am a Biotechnology student at MIT Manipal and a member of the MBM Wet Lab Subsystem. I enjoy learning about genetics, molecular biology, bioengineering, and healthcare innovations.";
-            }
-
-            else if (choice === "healthcare") {
-                box.innerHTML =
-                "Healthcare interests me because of its impact on society. I enjoy exploring disease prevention, diagnostics, medical technology, and patient care innovations.";
-            }
-
-            else if (choice === "cybersecurity") {
-                box.innerHTML =
-                "I am interested in cybersecurity and digital safety. I enjoy learning about ethical hacking, data protection, privacy, and secure technologies.";
-            }
-
-            else if (choice === "psychology") {
-                box.innerHTML =
-                "Psychology fascinates me because it helps explain human behavior, emotions, decision-making, and mental well-being.";
-            }
-
-            else if (choice === "innovation") {
-                box.innerHTML =
-                "I enjoy innovation and problem-solving. I am interested in new technologies, entrepreneurship, and ideas that can improve people's lives.";
-            }
-
-            else {
-                box.innerHTML =
-                "Select an option to learn more about my interests.";
-            }
-        }
-    </script>
+    </main>
 
 </body>
+
 </html>

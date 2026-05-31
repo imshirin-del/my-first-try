@@ -1,42 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interests</title>
+    <title>Hobbies & Interests</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="page1.html">Education</a>
-    <a href="page2.html">Interests</a>
-</nav>
-<div class="card">
-    <h1>Education & Experience</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="page1.html">Education</a>
+        <a href="page2.html" class="active">Hobbies & Interests</a>
+    </nav>
 
-    <p>School: Queen's Valley School, Dwarka, Delhi</p>
+    <main>
 
-    <p>Current Program: B.Tech Biotechnology, MIT Manipal</p>
+        <section class="card">
 
-    <p>
-        Completed a two-month internship in Nanotechnology and
-        Genetic Engineering under the guidance of an IIT PhD scholar.
-    </p>
-</div>
+            <div class="hobby-box">
 
-<div class="card">
-    <h1>Hobbies & Interests</h1>
+                <h2 class="section-title">My Hobbies</h2>
 
-    <ul>
-        <li>Bharatanatyam (8 years experience)</li>
-        <li>Singing and Cooking</li>
-        <li>Healthcare and Biotechnology</li>
-        <li>Cybersecurity and Psychology</li>
-        <li>Watching educational content</li>
-    </ul>
-</div>
+                <ul>
+                    <li>Bharatanatyam (8 years experience)</li>
+                    <li>Singing and Cooking</li>
+                    <li>Watching educational content on YouTube</li>
+                </ul>
+
+            </div>
+
+            <div class="interest-section">
+
+                <h2 class="section-title">My Interests</h2>
+
+                <label for="interest">
+                    Select my Area of Interest to know more:
+                </label>
+
+                <select id="interest" onchange="showInfo()">
+
+                    <option value="">
+                        -- Choose from the below --
+                    </option>
+
+                    <option value="biotech">Biotechnology</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="psychology">Psychology</option>
+                    <option value="innovation">Innovation</option>
+
+                </select>
+
+                <div id="infoBox" class="info-box">
+                    Select an option from above to learn more about my interests.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        function showInfo() {
+
+            const info = {
+                biotech: "I am a Biotechnology student at MIT Manipal and I am a member of MBM Wet Lab team. I love learning about genetics.",
+
+                healthcare: "I care about healthcare because it directly helps people. I like exploring how to prevent diseases, find health problems early, and use new medical tech to improve patient care.",
+
+                cybersecurity: "I'm really into cybersecurity and online safety. I enjoy learning how to protect data and keep information private to prevent becoming a victim of cybercrime.",
+
+                psychology: "Psychology interests me because I want to understand how people think. It’s fascinating to learn why we feel certain emotions, make choices, and how we can look after our mental health.",
+
+                innovation: "I love coming up with creative solutions to problems. I’m always excited about new technologies, business ideas, and inventions that can make everyday life better for people. I also enjoy exploring AI tools that make everyday life easier."
+            };
+
+            const selected = document.getElementById("interest").value;
+
+            document.getElementById("infoBox").innerHTML =
+                info[selected] ||
+                "Select an option from above to learn more about my interests.";
+        }
+
+    </script>
 
 </body>
+
 </html>
